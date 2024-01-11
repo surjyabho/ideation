@@ -1,0 +1,97 @@
+ const [isInteriorHovered, setIsInteriorHovered] = useState(false);
+  const [isFurnitureHovered, setIsFurnitureHovered] = useState(false);
+  const [isDesignHovered, setIsDesignHovered] = useState(false);
+  const [isPlumbingHovered, setIsPlumbingHovered] = useState(false);
+
+  const handleHover = (id) => {
+    switch (id) {
+      case "interior":
+        setIsInteriorHovered(!isInteriorHovered);
+        break;
+      case "furniture":
+        setIsFurnitureHovered(!isFurnitureHovered);
+        break;
+      case "design":
+        setIsDesignHovered(!isDesignHovered);
+        break;
+      case "plumbing":
+        setIsPlumbingHovered(!isPlumbingHovered);
+        break;
+      default:
+        break;
+    }
+  };
+ 
+ 
+ <ServiceCard
+          image={interior}
+          title="ARCHITECTURE INTERIOR"
+          projects="23"
+          handleHover={() => handleHover("interior")}
+          isHovered={isInteriorHovered}
+          color="hover:bg-[#9A0A0A]"
+        />
+        <ServiceCard
+          image={sofa}
+          title="Homes Furniture"
+          projects="30"
+          handleHover={() => handleHover("furniture")}
+          isHovered={isFurnitureHovered}
+          color="hover:bg-[#9A0A0A]"
+        />
+        <ServiceCard
+          image={structure}
+          title="Structure Designing"
+          projects="17"
+          handleHover={() => handleHover("design")}
+          isHovered={isDesignHovered}
+          color="hover:bg-[#9A0A0A]"
+        />
+        <ServiceCard
+          image={plumbing}
+          title="plumbing and mechanical"
+          projects="9"
+          handleHover={() => handleHover("plumbing")}
+          isHovered={isPlumbingHovered}
+          color="hover:bg-[#9A0A0A]"
+        /> 
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* <WorkCard
+          icon={home}
+          text="residential"
+          hoverImg={residential}
+          handleHover={() => handleHover("residential")}
+          isHovered={isHomeHovered}
+        />
+        <WorkCard
+          icon={commercial}
+          text="commercial"
+          hoverImg={residential}
+          handleHover={() => handleHover("commercial")}
+          isHovered={isComHovered}
+        />
+        <WorkCard
+          icon={care}
+          text="health care"
+          hoverImg={residential}
+          handleHover={() => handleHover("health care")}
+          isHovered={isCareHovered}
+        />
+        <WorkCard
+          icon={hospital}
+          text="hospitality"
+          hoverImg={residential}
+          handleHover={() => handleHover("hospitality")}
+          isHovered={isHospitalHovered}
+        /> */}
